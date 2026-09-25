@@ -994,6 +994,109 @@ body {
 }
 
 /* ==========================================================================
+   REAL FACILITY PHOTO GALLERY & JUSTDIAL TRUST BADGES
+   ========================================================================== */
+.hero-jd-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    border-radius: 20px;
+    font-family: var(--font-subheading);
+    font-size: 0.82rem;
+    color: #f59e0b;
+    margin-bottom: 14px;
+    width: fit-content;
+}
+
+.hero-jd-badge i {
+    color: #f59e0b;
+}
+
+.gallery-header-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.jd-verified-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid var(--border-gold);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-family: var(--font-subheading);
+    font-size: 0.88rem;
+    color: var(--text-white);
+    white-space: nowrap;
+}
+
+.facility-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.gallery-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0;
+    aspect-ratio: 4 / 3;
+    border: 1px solid var(--border-dark);
+    background: #0d1017;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.gallery-card:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 20px;
+    background: linear-gradient(180deg, transparent 0%, rgba(6, 7, 9, 0.95) 85%);
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.gallery-caption h4 {
+    font-family: var(--font-subheading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.gallery-caption span {
+    font-size: 0.78rem;
+    color: var(--royal-gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
    PROGRAMS / BATTLE ARENAS
    ========================================================================== */
 .programs-grid {
@@ -1888,16 +1991,62 @@ input:checked + .slider:before {
 .timing-badge-table {
     background: rgba(6, 7, 9, 0.7);
     border: 1px solid var(--border-dark);
-    border-radius: 6px;
-    padding: 16px;
+    border-radius: 8px;
+    padding: 18px;
     margin-top: 10px;
+}
+
+.shift-highlight-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.shift-badge {
+    background: rgba(14, 18, 25, 0.9);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 8px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.shift-badge i {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.shift-badge.morning i {
+    color: #f59e0b;
+}
+
+.shift-badge.evening i {
+    color: #38bdf8;
+}
+
+.shift-badge strong {
+    font-family: var(--font-subheading);
+    font-size: 0.82rem;
+    display: block;
+    color: var(--text-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.shift-badge span {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: var(--royal-gold);
+    font-weight: 700;
 }
 
 .timing-row {
     display: flex;
     justify-content: space-between;
-    padding: 6px 0;
-    font-size: 0.9rem;
+    padding: 8px 0;
+    font-size: 0.92rem;
     border-bottom: 1px dashed #1f2530;
 }
 
@@ -2223,6 +2372,11 @@ input, select, textarea {
         min-height: 350px;
     }
 
+    .facility-photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
@@ -2544,6 +2698,11 @@ input, select, textarea {
         gap: 14px;
     }
 
+    .facility-photo-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
     .feature-box {
         padding: 20px;
     }
@@ -2597,6 +2756,11 @@ input, select, textarea {
         width: 100%;
         min-width: unset;
         font-size: 1.15rem;
+    }
+
+    .shift-highlight-box {
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 
     .modal-content {

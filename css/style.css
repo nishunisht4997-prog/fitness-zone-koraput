@@ -1699,81 +1699,141 @@ body {
 }
 
 /* ==========================================================================
-   PRICING & BATTLE PASSES
+   PRICING & VERIFIED RATE CARD
    ========================================================================== */
-.pricing-switch-wrap {
+.day-pass-banner {
+    background: linear-gradient(135deg, rgba(20, 24, 33, 0.95), rgba(12, 14, 20, 0.95));
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 12px;
+    padding: 24px 32px;
+    margin-bottom: 36px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: 50px;
-    font-family: var(--font-subheading);
-    font-size: 1.05rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-.switch {
+    justify-content: space-between;
+    gap: 24px;
     position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 32px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.12);
 }
 
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
+.day-pass-banner::before {
+    content: '';
     position: absolute;
-    cursor: pointer;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--bg-surface);
-    border: 1px solid var(--border-dark);
-    transition: .4s;
-    border-radius: 34px;
+    width: 5px;
+    height: 100%;
+    background: var(--gold-gradient);
 }
 
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 22px;
-    width: 22px;
-    left: 5px;
-    bottom: 4px;
-    background-color: var(--royal-gold);
-    box-shadow: 0 0 10px var(--royal-gold);
-    transition: .4s;
-    border-radius: 50%;
+.day-pass-content {
+    flex: 1;
 }
 
-input:checked + .slider {
-    background-color: #1a1710;
+.day-pass-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(212, 175, 55, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: var(--royal-gold);
+    font-family: var(--font-subheading);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
-input:checked + .slider:before {
-    transform: translateX(27px);
+.day-pass-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: var(--text-white);
+    margin-bottom: 6px;
+}
+
+.day-pass-info p {
+    color: var(--text-silver);
+    font-size: 0.92rem;
+    line-height: 1.5;
+    max-width: 680px;
+}
+
+.day-pass-cta-wrap {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.day-pass-price {
+    text-align: right;
+}
+
+.day-pass-price .price-val {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: #ffffff;
+    line-height: 1;
+    display: block;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.day-pass-price .price-unit {
+    color: var(--royal-gold);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.plan-tag-pill {
+    display: inline-block;
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    color: var(--royal-gold);
+    font-family: var(--font-subheading);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-bottom: 12px;
 }
 
 .save-pill {
+    display: inline-block;
     background: rgba(212, 175, 55, 0.15);
     border: 1px solid var(--border-gold);
     color: var(--royal-gold);
-    padding: 3px 12px;
+    padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.save-pill.best-value-pill {
+    background: rgba(239, 68, 68, 0.18);
+    border-color: rgba(239, 68, 68, 0.5);
+    color: #fca5a5;
+    font-weight: 700;
+}
+
+.monthly-equiv {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--text-silver);
+    font-family: var(--font-subheading);
+    font-weight: 600;
+    margin-top: 4px;
 }
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
     align-items: stretch;
 }
 
@@ -1782,24 +1842,30 @@ input:checked + .slider:before {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    padding: 32px 24px;
 }
 
 .pricing-card.popular {
     border-color: var(--royal-gold);
     box-shadow: 0 0 35px rgba(212, 175, 55, 0.35);
-    transform: scale(1.03);
+    transform: scale(1.02);
+}
+
+.pricing-card.champion-plan {
+    border-color: #f59e0b;
+    box-shadow: 0 0 35px rgba(245, 158, 11, 0.35);
 }
 
 .popular-ribbon {
     position: absolute;
     top: 0;
-    right: 30px;
+    right: 24px;
     background: var(--gold-gradient);
     color: #060709;
     font-family: var(--font-subheading);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 800;
-    padding: 6px 14px;
+    padding: 5px 12px;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
     letter-spacing: 1.5px;
@@ -1807,12 +1873,12 @@ input:checked + .slider:before {
 }
 
 .plan-header {
-    margin-bottom: 24px;
+    margin-bottom: 22px;
 }
 
 .plan-header h3 {
     font-family: var(--font-heading);
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     letter-spacing: 1px;
 }
 
@@ -1820,12 +1886,12 @@ input:checked + .slider:before {
     display: flex;
     align-items: baseline;
     gap: 6px;
-    margin: 16px 0;
+    margin: 14px 0 8px;
 }
 
 .plan-amount {
     font-family: var(--font-heading);
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     color: #ffffff;
     line-height: 1;
     text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
@@ -1834,36 +1900,55 @@ input:checked + .slider:before {
 .plan-period {
     color: var(--text-silver);
     font-family: var(--font-subheading);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 600;
 }
 
 .plan-features-list {
     list-style: none;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
     flex: 1;
 }
 
 .plan-features-list li {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 14px;
+    gap: 10px;
+    margin-bottom: 12px;
     color: var(--text-silver);
-    font-size: 0.94rem;
+    font-size: 0.88rem;
+    line-height: 1.4;
 }
 
 .plan-features-list li i {
     color: var(--royal-gold);
+    flex-shrink: 0;
 }
 
-.plan-features-list li.disabled {
-    color: #475569;
-    text-decoration: line-through;
+@media (max-width: 1200px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 }
 
-.plan-features-list li.disabled i {
-    color: #475569;
+@media (max-width: 860px) {
+    .day-pass-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    .day-pass-cta-wrap {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 640px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ==========================================================================

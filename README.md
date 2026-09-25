@@ -50,6 +50,18 @@ A modern, high-performance single-page web platform designed for **Fitness Zone 
 
 ---
 
+## 💰 Official Verified Membership Rate Card (Justdial Catalog)
+
+| Plan / Duration | Official Fee | Features & Savings |
+| :--- | :--- | :--- |
+| **1 Day Pass** | **₹100.00 / day** | Single-day access to free weights, machines, power racks & cardio. Ideal for visitors & trials. |
+| **1 Month Pass** | **₹2,000.00 / month** | Flexible short-term membership with full facility & dual-shift access. |
+| **3 Months Pass** | **₹5,000.00 / 3 mo** | Quarterly recomp habit builder. **Saves ₹1,000** (₹1,666/mo equivalent). |
+| **6 Months Pass** | **₹8,000.00 / 6 mo** | Half-yearly transformation package. **Saves ₹4,000 / 33% OFF** (₹1,333/mo equivalent). |
+| **1 Year Annual Pass** | **₹12,000.00 / year** | Best Value Champion! Unlimited annual access. **Saves ₹12,000 / Flat 50% OFF** (Only ₹1,000/mo or ₹33/day!). |
+
+---
+
 ## 💻 How to Run Locally
 
 1. Clone or download this repository:

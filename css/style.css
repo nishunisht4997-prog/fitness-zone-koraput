@@ -2762,6 +2762,7 @@ html, body {
         padding-right: 0;
         gap: 14px;
         margin-top: 10px;
+        margin-bottom: 50px;
     }
 
     .floating-hud-card {
@@ -2830,7 +2831,7 @@ html, body {
     /* Hero */
     .hero-section {
         padding-top: 100px;
-        padding-bottom: 70px;
+        padding-bottom: 90px;
         min-height: auto;
     }
 
@@ -2848,14 +2849,16 @@ html, body {
     .hero-hud-stage {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 12px;
         width: 100%;
+        margin-top: 20px;
+        margin-bottom: 55px;
     }
 
     .floating-hud-card {
         min-width: unset;
         flex: 1 1 calc(50% - 10px);
-        max-width: 220px;
+        max-width: 240px;
         padding: 10px 14px;
         gap: 10px;
     }
@@ -2875,7 +2878,7 @@ html, body {
     }
 
     .slider-controls-wrap {
-        bottom: 12px;
+        bottom: 16px;
         padding: 6px 16px;
         gap: 10px;
     }
@@ -3055,16 +3058,47 @@ html, body {
         padding: 20px 16px;
     }
 
+    .hero-section {
+        padding-top: 95px;
+        padding-bottom: 90px;
+    }
+
     .hero-hud-stage {
+        display: flex;
         flex-direction: column;
         align-items: stretch;
+        gap: 10px;
+        margin-top: 20px;
+        margin-bottom: 60px; /* Guaranteed clearance above slider controls pill */
     }
 
     .floating-hud-card {
         flex: 1 1 100%;
+        width: 100%;
         max-width: 100%;
         justify-content: flex-start;
-        padding: 10px 16px;
+        padding: 10px 14px;
+    }
+
+    .slider-controls-wrap {
+        bottom: 14px;
+        padding: 6px 14px;
+        gap: 8px;
+    }
+
+    .slider-dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    .slider-dot.active {
+        width: 18px;
+    }
+
+    .slider-counter {
+        font-size: 0.78rem;
+        padding-left: 10px;
+        margin-left: 4px;
     }
 
     .hero-badge-strip {
@@ -3156,8 +3190,35 @@ html, body {
         height: 36px;
     }
 
+    .hero-section {
+        padding-top: 90px;
+        padding-bottom: 85px;
+    }
+
     .hero-heading {
         font-size: 1.95rem;
+    }
+
+    .hero-hud-stage {
+        margin-bottom: 60px;
+        gap: 8px;
+    }
+
+    .floating-hud-card {
+        padding: 8px 12px;
+        gap: 10px;
+    }
+
+    .slider-controls-wrap {
+        bottom: 12px;
+        padding: 5px 12px;
+        gap: 6px;
+    }
+
+    .slider-counter {
+        font-size: 0.72rem;
+        padding-left: 8px;
+        margin-left: 4px;
     }
 
     .stat-number-wrap {

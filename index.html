@@ -690,35 +690,38 @@
                 <!-- 1. BMI CALCULATOR -->
                 <div class="calc-card">
                     <h3><i class="fa-solid fa-weight-scale"></i> Live BMI & Body Composition</h3>
-                    <p class="calc-desc">Enter your height and weight to assess your baseline body mass index and receive instant training phase recommendations.</p>
+                    <p class="calc-desc">Enter your body stats to calculate your real-time BMI, estimated body fat %, ideal weight range & custom beast training phase.</p>
 
-                    <form id="bmi-form">
+                    <form id="bmi-form" onsubmit="return false;">
                         <div class="form-group-grid">
                             <div class="form-field">
                                 <label for="bmi-height">Height (CM)</label>
-                                <input type="number" id="bmi-height" value="175" min="100" max="250" placeholder="e.g. 175">
+                                <input type="number" id="bmi-height" value="175" min="80" max="250" placeholder="e.g. 175" inputmode="numeric">
                             </div>
                             <div class="form-field">
                                 <label for="bmi-weight">Weight (KG)</label>
-                                <input type="number" id="bmi-weight" value="75" min="30" max="200" placeholder="e.g. 75">
+                                <input type="number" id="bmi-weight" value="75" min="25" max="250" placeholder="e.g. 75" inputmode="numeric">
                             </div>
                         </div>
                         <div class="form-group-grid">
                             <div class="form-field">
                                 <label for="bmi-age">Age (Years)</label>
-                                <input type="number" id="bmi-age" value="24" min="12" max="90">
+                                <input type="number" id="bmi-age" value="24" min="10" max="100" placeholder="e.g. 24" inputmode="numeric">
                             </div>
                             <div class="form-field">
                                 <label for="bmi-gender">Gender</label>
                                 <select id="bmi-gender">
-                                    <option value="male">Male Warrior</option>
-                                    <option value="female">Female Valkyrie</option>
+                                    <option value="male">Male (Men)</option>
+                                    <option value="female">Female (Women)</option>
                                 </select>
                             </div>
                         </div>
+                        <button type="button" id="bmi-calc-btn" class="btn btn-gold" style="width: 100%; margin-top: 4px; padding: 10px 16px; font-size: 0.9rem;">
+                            <i class="fa-solid fa-calculator"></i> Calculate Live Specs
+                        </button>
                     </form>
 
-                    <!-- BMI Display Gauge -->
+                    <!-- BMI Display Gauge & Specs -->
                     <div class="bmi-meter-box">
                         <div class="gauge-wrap">
                             <div class="gauge-semi-circle"></div>
@@ -726,8 +729,25 @@
                             <div class="gauge-needle" id="bmi-gauge-needle"></div>
                         </div>
                         <div class="bmi-result-num" id="bmi-value">24.5</div>
-                        <div class="bmi-result-status" id="bmi-status">OPTIMAL ATHLETIC MASS</div>
-                        <div class="bmi-advice-text" id="bmi-advice">Ideal beast zone! Focus on progressive overload and hypertrophy.</div>
+                        <div class="bmi-result-status" id="bmi-status" style="color: #10b981;">OPTIMAL ATHLETIC MASS</div>
+                        
+                        <!-- Live Detailed Body Composition Breakdown Stats -->
+                        <div class="bmi-specs-grid" id="bmi-specs-grid">
+                            <div class="bmi-spec-pill">
+                                <span>Est. Body Fat</span>
+                                <strong id="bmi-bodyfat">~ 16.8%</strong>
+                            </div>
+                            <div class="bmi-spec-pill">
+                                <span>Ideal Weight</span>
+                                <strong id="bmi-ideal-weight">57 - 76 KG</strong>
+                            </div>
+                            <div class="bmi-spec-pill">
+                                <span>Daily Water</span>
+                                <strong id="bmi-water">3.2 L</strong>
+                            </div>
+                        </div>
+
+                        <div class="bmi-advice-text" id="bmi-advice">Ideal beast zone! Focus on progressive overload, lean muscle hypertrophy, and conditioning.</div>
                     </div>
                 </div>
 
@@ -736,18 +756,22 @@
                     <h3><i class="fa-solid fa-drumstick-bite"></i> Beast Macro & Calorie Engine</h3>
                     <p class="calc-desc">Calculate your exact daily caloric requirement and essential protein grams based on your chosen transformation goal.</p>
 
-                    <form id="macro-form">
+                    <form id="macro-form" onsubmit="return false;">
                         <div class="form-group-grid">
                             <div class="form-field">
                                 <label for="macro-weight">Weight (KG)</label>
-                                <input type="number" id="macro-weight" value="75" min="30" max="200">
+                                <input type="number" id="macro-weight" value="75" min="25" max="250" placeholder="e.g. 75" inputmode="numeric">
                             </div>
                             <div class="form-field">
                                 <label for="macro-height">Height (CM)</label>
-                                <input type="number" id="macro-height" value="175" min="100" max="250">
+                                <input type="number" id="macro-height" value="175" min="80" max="250" placeholder="e.g. 175" inputmode="numeric">
                             </div>
                         </div>
                         <div class="form-group-grid">
+                            <div class="form-field">
+                                <label for="macro-age">Age (Years)</label>
+                                <input type="number" id="macro-age" value="24" min="10" max="100" placeholder="e.g. 24" inputmode="numeric">
+                            </div>
                             <div class="form-field">
                                 <label for="macro-goal">Transformation Goal</label>
                                 <select id="macro-goal">
@@ -756,15 +780,18 @@
                                     <option value="strength">Clean Strength Recomp (+200 kcal)</option>
                                 </select>
                             </div>
-                            <div class="form-field">
-                                <label for="macro-activity">Training Intensity</label>
-                                <select id="macro-activity">
-                                    <option value="1.55">Heavy (4-5 Gym Days/Wk)</option>
-                                    <option value="1.725">Intense Beast (6-7 Days/Wk)</option>
-                                    <option value="1.375">Moderate (3 Days/Wk)</option>
-                                </select>
-                            </div>
                         </div>
+                        <div class="form-field" style="margin-bottom: 12px;">
+                            <label for="macro-activity">Training Intensity</label>
+                            <select id="macro-activity">
+                                <option value="1.55">Heavy (4-5 Gym Days/Wk)</option>
+                                <option value="1.725">Intense Beast (6-7 Days/Wk)</option>
+                                <option value="1.375">Moderate (3 Days/Wk)</option>
+                            </select>
+                        </div>
+                        <button type="button" id="macro-calc-btn" class="btn btn-gold" style="width: 100%; margin-top: 2px; padding: 10px 16px; font-size: 0.9rem;">
+                            <i class="fa-solid fa-fire"></i> Compute Daily Fuel
+                        </button>
                     </form>
 
                     <!-- Macro Output Cards -->
@@ -787,7 +814,7 @@
                         </div>
                     </div>
 
-                    <div style="margin-top: 24px; text-align: center;">
+                    <div style="margin-top: 20px; text-align: center;">
                         <a href="#location" class="btn btn-primary" style="width: 100%;">
                             <i class="fa-solid fa-file-invoice"></i> Get Custom Meal Plan at Gym
                         </a>

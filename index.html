@@ -97,6 +97,7 @@
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#programs">Programs</a></li>
+                    <li><a href="#amenities">Amenities</a></li>
                     <li><a href="#pricing">Plans</a></li>
                     <li><a href="#location">Contact</a></li>
                     <li class="mobile-nav-cta-item">
@@ -320,13 +321,13 @@
                 </div>
             </div>
 
-            <!-- REAL FACILITY PHOTO GALLERY -->
+            <!-- REAL FACILITY PHOTO GALLERY WITH FILTER TABS (7 JUSTDIAL HD PHOTOS) -->
             <div class="facility-gallery-section" style="margin-top: 60px;">
                 <div class="gallery-header-row">
                     <div>
                         <span class="section-tag" style="margin-bottom: 8px;"><i class="fa-solid fa-camera"></i> Live Facility Tour</span>
                         <h3 style="font-family: var(--font-heading); font-size: clamp(1.6rem, 3.8vw, 2.4rem); letter-spacing: 1px;">INSIDE FITNESS ZONE <span class="text-gradient-gold">KORAPUT</span></h3>
-                        <p class="text-muted" style="margin-top: 6px; font-size: 0.95rem;">Experience our authentic, heavy-duty training floor, competition iron rigs, and cardio suites in Sarojini Nagar, Poda Line.</p>
+                        <p class="text-muted" style="margin-top: 6px; font-size: 0.95rem;">Explore all 7 verified catalogue photos showcasing our authentic heavy iron floor, strength rigs, cardio suite & luxury studio in Sarojini Nagar, Poda Line.</p>
                     </div>
                     <div class="jd-verified-chip">
                         <i class="fa-solid fa-star" style="color: #f59e0b;"></i>
@@ -334,47 +335,84 @@
                     </div>
                 </div>
 
-                <div class="facility-photo-grid">
-                    <div class="gallery-card tilt-card">
+                <!-- Gallery Category Filter Buttons -->
+                <div class="gallery-filter-wrap">
+                    <button class="gallery-filter-btn active" data-filter="all"><i class="fa-solid fa-border-all"></i> All Photos (7)</button>
+                    <button class="gallery-filter-btn" data-filter="iron"><i class="fa-solid fa-dumbbell"></i> Heavy Iron & Racks (3)</button>
+                    <button class="gallery-filter-btn" data-filter="strength"><i class="fa-solid fa-layer-group"></i> Strength Rigs (2)</button>
+                    <button class="gallery-filter-btn" data-filter="cardio"><i class="fa-solid fa-heart-pulse"></i> Cardio Suite (1)</button>
+                    <button class="gallery-filter-btn" data-filter="ambience"><i class="fa-solid fa-crown"></i> Luxury Studio (1)</button>
+                </div>
+
+                <!-- 7 Photos Grid -->
+                <div class="facility-photo-grid" id="facility-photo-grid">
+                    <!-- Photo 1: Main Iron Floor -->
+                    <div class="gallery-card tilt-card" data-category="iron">
                         <img src="https://content.jdmagicbox.com/v2/comp/koraput/h8/9999p6852.6852.241113225003.v4h8/catalogue/fitness-zone-koraput-gyms-u0595jtmhz.jpg" alt="Fitness Zone Koraput Main Gym Floor" loading="lazy">
+                        <div class="gallery-overlay-btn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></div>
                         <div class="gallery-caption">
                             <h4>Main Iron Floor & Dumbbells</h4>
-                            <span>Solid Steel Dumbbells & Racks</span>
+                            <span>Solid Steel Dumbbells & Heavy Racks</span>
                         </div>
                     </div>
-                    <div class="gallery-card tilt-card">
+
+                    <!-- Photo 2: Strength Cable Rig -->
+                    <div class="gallery-card tilt-card" data-category="strength">
                         <img src="https://content.jdmagicbox.com/v2/comp/koraput/h8/9999p6852.6852.241113225003.v4h8/catalogue/fitness-zone-koraput-gyms-8jwd990gav.jpg" alt="Fitness Zone Strength Training Rig" loading="lazy">
+                        <div class="gallery-overlay-btn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></div>
                         <div class="gallery-caption">
-                            <h4>Cable & Strength Rig</h4>
-                            <span>Biomechanic Isolation Stations</span>
+                            <h4>Cable Cross & Strength Rig</h4>
+                            <span>Dual Adjustable Pulleys & Isolation</span>
                         </div>
                     </div>
-                    <div class="gallery-card tilt-card">
-                        <img src="https://content.jdmagicbox.com/v2/comp/koraput/h8/9999p6852.6852.241113225003.v4h8/catalogue/fitness-zone-koraput-gyms-34gy56qde1.jpg" alt="Fitness Zone Olympic Bench Press" loading="lazy">
+
+                    <!-- Photo 3: Machine Row -->
+                    <div class="gallery-card tilt-card" data-category="strength">
+                        <img src="https://content.jdmagicbox.com/v2/comp/koraput/h8/9999p6852.6852.241113225003.v4h8/catalogue/fitness-zone-koraput-gyms-34gy56qde1.jpg" alt="Fitness Zone Biomechanic Isolation Machines" loading="lazy">
+                        <div class="gallery-overlay-btn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></div>
                         <div class="gallery-caption">
-                            <h4>Olympic Bench & Chest Station</h4>
-                            <span>Competition Barbell Racks</span>
+                            <h4>Biomechanic Machine Suite</h4>
+                            <span>Target Muscle Isolation Equipment</span>
                         </div>
                     </div>
-                    <div class="gallery-card tilt-card">
-                        <img src="https://content.jdmagicbox.com/v2/comp/koraput/h8/9999p6852.6852.241113225003.v4h8/catalogue/fitness-zone-koraput-gyms-npb16t37p9.jpg" alt="Fitness Zone Cardio & Treadmills" loading="lazy">
+
+                    <!-- Photo 4: Dumbbell Rack -->
+                    <div class="gallery-card tilt-card" data-category="iron">
+                        <img src="https://content.jdmagicbox.com/v2/comp/koraput/h8/9999p6852.6852.241113225003.v4h8/catalogue/fitness-zone-koraput-gyms-npb16t37p9.jpg" alt="Fitness Zone Solid Steel Dumbbell Rack" loading="lazy">
+                        <div class="gallery-overlay-btn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></div>
                         <div class="gallery-caption">
-                            <h4>Cardio & Leg Strength Suite</h4>
-                            <span>Treadmills, Cycles & Leg Press</span>
+                            <h4>Steel Dumbbell Rack & Free Weights</h4>
+                            <span>2.5kg to 60kg Pro Dumbbell Tier</span>
                         </div>
                     </div>
-                    <div class="gallery-card tilt-card">
-                        <img src="https://content.jdmagicbox.com/v2/comp/koraput/h8/9999p6852.6852.241113225003.v4h8/catalogue/fitness-zone-koraput-gyms-yj0zeq0vef.jpg" alt="Fitness Zone Power Rack" loading="lazy">
+
+                    <!-- Photo 5: Cardio Suite -->
+                    <div class="gallery-card tilt-card" data-category="cardio">
+                        <img src="https://content.jdmagicbox.com/v2/comp/koraput/h8/9999p6852.6852.241113225003.v4h8/catalogue/fitness-zone-koraput-gyms-yj0zeq0vef.jpg" alt="Fitness Zone Cardio & Treadmills" loading="lazy">
+                        <div class="gallery-overlay-btn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></div>
                         <div class="gallery-caption">
-                            <h4>Power Racks & Squat Platforms</h4>
-                            <span>Raw Heavy Lifting Cages</span>
+                            <h4>Cardio & Endurance Arena</h4>
+                            <span>Treadmills, Spin Cycles & HIIT Arena</span>
                         </div>
                     </div>
-                    <div class="gallery-card tilt-card">
-                        <img src="https://content.jdmagicbox.com/v2/comp/koraput/h8/9999p6852.6852.241113225003.v4h8/catalogue/fitness-zone-koraput-gyms-m6smvcj5so.jpg" alt="Fitness Zone Workout Hall" loading="lazy">
+
+                    <!-- Photo 6: Luxury Studio Ambience -->
+                    <div class="gallery-card tilt-card" data-category="ambience">
+                        <img src="https://content.jdmagicbox.com/v2/comp/koraput/h8/9999p6852.6852.241113225003.v4h8/catalogue/fitness-zone-koraput-gyms-m6smvcj5so.jpg" alt="Fitness Zone Luxury Studio Ambience" loading="lazy">
+                        <div class="gallery-overlay-btn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></div>
                         <div class="gallery-caption">
-                            <h4>Spacious Unisex Studio</h4>
-                            <span>High-Energy Workout Environment</span>
+                            <h4>Luxury Studio Ambience</h4>
+                            <span>Spacious, Air-Conditioned Workout Floor</span>
+                        </div>
+                    </div>
+
+                    <!-- Photo 7: Olympic Bench & Lifting -->
+                    <div class="gallery-card tilt-card" data-category="iron">
+                        <img src="https://content.jdmagicbox.com/v2/comp/koraput/h8/9999p6852.6852.241113225003.v4h8/catalogue/fitness-zone-koraput-gyms-zdk86itzl1.jpg" alt="Fitness Zone Olympic Lifting & Bench Arena" loading="lazy">
+                        <div class="gallery-overlay-btn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></div>
+                        <div class="gallery-caption">
+                            <h4>Olympic Lifting & Bench Arena</h4>
+                            <span>Power Racks, Platforms & Competition Barbells</span>
                         </div>
                     </div>
                 </div>
@@ -382,87 +420,169 @@
         </div>
     </section>
 
-    <!-- WORKOUT PROGRAMS -->
+    <!-- LUXURY GYM AMENITIES & BADGES SECTION (JUSTDIAL VERIFIED) -->
+    <section class="section amenities-section" id="amenities">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-crown"></i> Justdial Listed Luxury Gym</span>
+                <h2 class="beast-title">WORLD-CLASS <span class="text-gradient-gold">AMENITIES & COMFORT</span></h2>
+                <p class="section-subtitle">Categorized officially as a Luxury Gym in Koraput. Designed for maximum athletic performance, cleanliness, and VIP comfort.</p>
+            </div>
+
+            <div class="amenities-grid">
+                <!-- Amenity 1 -->
+                <div class="amenity-card tilt-card">
+                    <div class="tilt-glare"></div>
+                    <div class="amenity-icon"><i class="fa-solid fa-snowflake"></i></div>
+                    <h3>High-Power AC Climate Control</h3>
+                    <p>Fully air-conditioned workout hall maintaining optimal ambient cooling and oxygen circulation during grueling sets.</p>
+                </div>
+
+                <!-- Amenity 2 -->
+                <div class="amenity-card tilt-card">
+                    <div class="tilt-glare"></div>
+                    <div class="amenity-icon"><i class="fa-solid fa-lock"></i></div>
+                    <h3>Personal Secure Lockers</h3>
+                    <p>Dedicated locker facilities to safeguard your gym bags, gadgets, wallets, and personal essentials safely.</p>
+                </div>
+
+                <!-- Amenity 3 -->
+                <div class="amenity-card tilt-card">
+                    <div class="tilt-glare"></div>
+                    <div class="amenity-icon"><i class="fa-solid fa-shower"></i></div>
+                    <h3>Hygiene Showers & Fresh Washrooms</h3>
+                    <p>Spotlessly sanitized showers and changing rooms so you can freshen up seamlessly before work or college.</p>
+                </div>
+
+                <!-- Amenity 4 -->
+                <div class="amenity-card tilt-card">
+                    <div class="tilt-glare"></div>
+                    <div class="amenity-icon"><i class="fa-solid fa-shield-virus"></i></div>
+                    <h3>100% Sanitized Equipment</h3>
+                    <p>Heavy iron rigs, benches, and machine handles sanitized multiple times daily to maintain medical-grade gym hygiene.</p>
+                </div>
+
+                <!-- Amenity 5 -->
+                <div class="amenity-card tilt-card">
+                    <div class="tilt-glare"></div>
+                    <div class="amenity-icon"><i class="fa-solid fa-volume-high"></i></div>
+                    <h3>Surround Sound Motivation</h3>
+                    <p>High-impact acoustic sound setup pumping workout beats and bass to keep adrenaline pumping on every single rep.</p>
+                </div>
+
+                <!-- Amenity 6 -->
+                <div class="amenity-card tilt-card">
+                    <div class="tilt-glare"></div>
+                    <div class="amenity-icon"><i class="fa-solid fa-square-parking"></i></div>
+                    <h3>Free Roadside Dedicated Parking</h3>
+                    <p>Hassle-free parking space directly in front of the gym on Kechala Road for both two-wheelers and four-wheelers.</p>
+                </div>
+
+                <!-- Amenity 7 -->
+                <div class="amenity-card tilt-card">
+                    <div class="tilt-glare"></div>
+                    <div class="amenity-icon"><i class="fa-solid fa-faucet-drip"></i></div>
+                    <h3>Chilled RO Pure Hydration</h3>
+                    <p>Free unlimited chilled and normal RO drinking water stations for instant hydration during your workouts.</p>
+                </div>
+
+                <!-- Amenity 8 -->
+                <div class="amenity-card tilt-card">
+                    <div class="tilt-glare"></div>
+                    <div class="amenity-icon"><i class="fa-solid fa-wifi"></i></div>
+                    <h3>High-Speed Free Wi-Fi</h3>
+                    <p>High-speed wireless connectivity throughout the facility to stream workout playlists and log fitness app data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFICIAL WORKOUT PROGRAMS & SPECIAL SERVICES (JUSTDIAL CATEGORIES) -->
     <section class="section programs-section" id="programs">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag"><i class="fa-solid fa-fire"></i> Official Service Categories</span>
-                <h2 class="beast-title">ELITE TRAINING & <span class="text-gradient-red">HEALTH CLUB SUITES</span></h2>
-                <p class="section-subtitle">Comprehensive fitness solutions listed under Gyms & Health Clubs, Personal Trainers, and Wellness in Koraput.</p>
+                <span class="section-tag"><i class="fa-solid fa-fire"></i> Official Justdial Categories</span>
+                <h2 class="beast-title">ELITE TRAINING & <span class="text-gradient-red">SPECIALIZED SUITES</span></h2>
+                <p class="section-subtitle">Explore our full spectrum of offerings: Luxury Gym floor, Home Personal Trainers for Men & Women, Meditation Classes, and Nutrition.</p>
             </div>
 
             <div class="programs-grid">
-                <!-- Card 1 -->
+                <!-- Program 1: Luxury Gyms & Health Club Floor -->
                 <div class="program-card tilt-card">
                     <div class="tilt-glare"></div>
                     <div>
                         <div class="program-icon-wrap"><i class="fa-solid fa-hand-back-fist"></i></div>
-                        <h3>Gyms & Health Club Floor</h3>
-                        <p>Fully equipped free weights floor, heavy dumbbells up to 60kg, competition benches, and biomechanic muscle hypertrophy rigs.</p>
+                        <span class="program-badge">Justdial Category</span>
+                        <h3>Gyms & Luxury Health Club Floor</h3>
+                        <p>Fully equipped free weights floor, heavy dumbbells up to 60kg, competition benches, power racks, and biomechanic muscle hypertrophy rigs.</p>
                         <div class="program-tags">
                             <span class="p-tag">Health Club</span>
                             <span class="p-tag">Heavy Iron</span>
                             <span class="p-tag">Hypertrophy</span>
                         </div>
                     </div>
-                    <a href="#muscle-zone" class="program-link">View Workout Plan <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#facility-photo-grid" class="program-link">View Facility Photos <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
-                <!-- Card 2 -->
+                <!-- Program 2: Personal Training At Home for Women (Official Justdial Category) -->
+                <div class="program-card tilt-card popular-program">
+                    <div class="tilt-glare"></div>
+                    <div>
+                        <div class="program-icon-wrap" style="color: #ec4899; background: rgba(236, 72, 153, 0.15); border-color: rgba(236, 72, 153, 0.4);"><i class="fa-solid fa-person-dress"></i></div>
+                        <span class="program-badge" style="color: #ec4899; border-color: rgba(236, 72, 153, 0.4);">Home Coaching</span>
+                        <h3>Personal Training At Home (For Women)</h3>
+                        <p>Certified trainers visiting your doorstep in Koraput. Tailored fat shred, posture alignment, core toning, postnatal fitness, and private safe home workout sessions.</p>
+                        <div class="program-tags">
+                            <span class="p-tag">Doorstep Trainer</span>
+                            <span class="p-tag">Women Fitness</span>
+                            <span class="p-tag">100% Privacy</span>
+                        </div>
+                    </div>
+                    <a href="#pricing" class="program-link open-pass-modal" data-plan="Personal Trainer At Home (Women)">Book Home Trainer <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Program 3: Personal Training At Home for Men (Official Justdial Category) -->
                 <div class="program-card tilt-card">
                     <div class="tilt-glare"></div>
                     <div>
                         <div class="program-icon-wrap"><i class="fa-solid fa-person-chalkboard"></i></div>
-                        <h3>Personal Training (Men & Women)</h3>
-                        <p>Dedicated male and female personal fitness coaching with tailored biomechanics, physique assessments, posture correction, and diet charts.</p>
+                        <span class="program-badge">Home Coaching</span>
+                        <h3>Personal Training At Home (For Men)</h3>
+                        <p>Hardcore 1-on-1 home personal training for busy professionals. Functional calisthenics, resistance bands, kettlebell circuits, and aggressive strength conditioning at your home.</p>
                         <div class="program-tags">
-                            <span class="p-tag">For Men & Women</span>
-                            <span class="p-tag">1-on-1 Coach</span>
-                            <span class="p-tag">Fast Results</span>
+                            <span class="p-tag">Doorstep Trainer</span>
+                            <span class="p-tag">Men Strength</span>
+                            <span class="p-tag">Custom Routine</span>
                         </div>
                     </div>
-                    <a href="#pricing" class="program-link open-pass-modal" data-plan="1-on-1 Personal Training">Book Trainer <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#pricing" class="program-link open-pass-modal" data-plan="Personal Trainer At Home (Men)">Book Home Trainer <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
-                <!-- Card 3 -->
+                <!-- Program 4: Meditation Classes & Mindfulness Counselling (Official Justdial Category) -->
                 <div class="program-card tilt-card">
                     <div class="tilt-glare"></div>
                     <div>
-                        <div class="program-icon-wrap"><i class="fa-solid fa-spa"></i></div>
-                        <h3>Meditation & Mind-Body Recovery</h3>
-                        <p>Guided breathwork, deep meditation classes, mobility stretches, and stress-release counseling for holistic wellness and mental endurance.</p>
+                        <div class="program-icon-wrap" style="color: #38bdf8; background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.4);"><i class="fa-solid fa-spa"></i></div>
+                        <span class="program-badge" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.4);">Mind-Body Wellness</span>
+                        <h3>Meditation Classes & Mindfulness</h3>
+                        <p>Guided breathwork, deep meditation classes, CNS nerve de-stressing, mental stamina building, and personalized lifestyle counseling for total mind-body rejuvenation.</p>
                         <div class="program-tags">
                             <span class="p-tag">Meditation Classes</span>
-                            <span class="p-tag">Mind-Body</span>
-                            <span class="p-tag">Recovery</span>
+                            <span class="p-tag">Counselling</span>
+                            <span class="p-tag">Stress Relief</span>
                         </div>
                     </div>
-                    <a href="#schedule" class="program-link">View Timetable <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#schedule" class="program-link open-pass-modal" data-plan="Meditation & Mind-Body Class">Enquire Meditation <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
-                <!-- Card 4 -->
-                <div class="program-card tilt-card">
-                    <div class="tilt-glare"></div>
-                    <div>
-                        <div class="program-icon-wrap"><i class="fa-solid fa-person-running"></i></div>
-                        <h3>Fat Shred & HIIT Blast</h3>
-                        <p>High-octane metabolic conditioning combining treadmills, curved runners, battle ropes, and functional circuits to incinerate body fat.</p>
-                        <div class="program-tags">
-                            <span class="p-tag">Fat Loss</span>
-                            <span class="p-tag">Endurance</span>
-                            <span class="p-tag">VO2 Max</span>
-                        </div>
-                    </div>
-                    <a href="#calculators" class="program-link">Calculate Calorie Target <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-
-                <!-- Card 5 -->
+                <!-- Program 5: Olympic Powerlifting & Raw Strength -->
                 <div class="program-card tilt-card">
                     <div class="tilt-glare"></div>
                     <div>
                         <div class="program-icon-wrap"><i class="fa-solid fa-weight-hanging"></i></div>
-                        <h3>Olympic Powerlifting & Strength</h3>
-                        <p>Heavy compound lifting focused on the Big Three — Squat, Bench Press, and Deadlift. Master bar mechanics and build monstrous raw power.</p>
+                        <span class="program-badge">Hardcore Iron</span>
+                        <h3>Olympic Powerlifting & Heavy Strength</h3>
+                        <p>Heavy compound lifting focused on the Big Three — Squat, Bench Press, and Deadlift. Master bar mechanics, Eleiko technique, and build monstrous raw power.</p>
                         <div class="program-tags">
                             <span class="p-tag">Big 3 Lifts</span>
                             <span class="p-tag">Raw Power</span>
@@ -472,17 +592,35 @@
                     <a href="#schedule" class="program-link">View Class Times <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
-                <!-- Card 6 -->
+                <!-- Program 6: Fat Shred & HIIT Blast -->
+                <div class="program-card tilt-card">
+                    <div class="tilt-glare"></div>
+                    <div>
+                        <div class="program-icon-wrap"><i class="fa-solid fa-person-running"></i></div>
+                        <span class="program-badge">Fat Incineration</span>
+                        <h3>Fat Shred & HIIT Blast</h3>
+                        <p>High-octane metabolic conditioning combining treadmills, curved runners, battle ropes, and functional circuits to incinerate stubborn body fat fast.</p>
+                        <div class="program-tags">
+                            <span class="p-tag">Fat Loss</span>
+                            <span class="p-tag">Endurance</span>
+                            <span class="p-tag">VO2 Max</span>
+                        </div>
+                    </div>
+                    <a href="#calculators" class="program-link">Calculate Calorie Target <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Program 7: Diet Counseling & Nutrition Fuel -->
                 <div class="program-card tilt-card">
                     <div class="tilt-glare"></div>
                     <div>
                         <div class="program-icon-wrap"><i class="fa-solid fa-apple-whole"></i></div>
+                        <span class="program-badge">Macro Science</span>
                         <h3>Diet Counseling & Nutrition Fuel</h3>
-                        <p>Authentic macro planning, personalized calorie periodization, recovery shake bar guidance, and body composition tracking.</p>
+                        <p>Authentic macro planning, personalized calorie periodization, recovery shake bar guidance, body composition tracking, and supplement stack advice.</p>
                         <div class="program-tags">
                             <span class="p-tag">Macro Planning</span>
-                            <span class="p-tag">Nutrition</span>
                             <span class="p-tag">Diet Protocol</span>
+                            <span class="p-tag">Nutrition</span>
                         </div>
                     </div>
                     <a href="#location" class="program-link">Consult Coach <i class="fa-solid fa-arrow-right"></i></a>
@@ -1124,6 +1262,20 @@
             </div>
         </div>
     </footer>
+
+    <!-- FULLSCREEN GALLERY LIGHTBOX MODAL -->
+    <div class="modal-overlay" id="lightbox-modal">
+        <div class="lightbox-wrapper">
+            <button class="modal-close-btn lightbox-close-btn" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+            <div class="lightbox-img-wrap">
+                <img src="" alt="Fitness Zone Koraput Photo Fullscreen" id="lightbox-img">
+            </div>
+            <div class="lightbox-info">
+                <h4 id="lightbox-title">Facility Photo</h4>
+                <span id="lightbox-desc">Fitness Zone Koraput</span>
+            </div>
+        </div>
+    </div>
 
     <!-- POPUP PASS BOOKING MODAL -->
     <div class="modal-overlay" id="booking-modal">

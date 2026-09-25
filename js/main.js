@@ -567,4 +567,78 @@ document.addEventListener('DOMContentLoaded', () => {
         // Start auto slide
         startAutoSlide();
     }
+
+    // ----------------------------------------------------
+    // 9. FACILITY PHOTO GALLERY FILTER & LIGHTBOX ENGINE
+    // ----------------------------------------------------
+    const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+    const galleryCards = document.querySelectorAll('.facility-photo-grid .gallery-card');
+    const lightboxModal = document.getElementById('lightbox-modal');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxDesc = document.getElementById('lightbox-desc');
+
+    // Gallery Category Filtering
+    if (filterBtns.length > 0 && galleryCards.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                galleryCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        card.classList.remove('hide');
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        card.classList.add('hide');
+                    }
+                });
+            });
+        });
+    }
+
+    // Lightbox Open & Close
+    if (lightboxModal && lightboxImg) {
+        galleryCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const img = card.querySelector('img');
+                const title = card.querySelector('.gallery-caption h4')?.innerText || 'Fitness Zone Facility';
+                const desc = card.querySelector('.gallery-caption span')?.innerText || 'Koraput, Odisha';
+
+                if (img) {
+                    lightboxImg.src = img.src;
+                    if (lightboxTitle) lightboxTitle.innerText = title;
+                    if (lightboxDesc) lightboxDesc.innerText = desc;
+                    lightboxModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        function closeLightbox() {
+            lightboxModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            if (lightboxImg) lightboxImg.src = '';
+        }
+
+        if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal) closeLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightboxModal.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+    }
 });

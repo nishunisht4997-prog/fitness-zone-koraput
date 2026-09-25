@@ -11,7 +11,13 @@ A modern, high-performance single-page web platform designed for **Fitness Zone 
 - **🏆 Luxury Visual Experience**: Matte Pitch Black (`#060709`) and Royal 24K Gold (`#d4af37`) color palette with floating gold stardust particle engine.
 - **🖼️ Full-Screen Hero Background Slider with Real Gym Photos**: Smooth cross-fading authentic gym floor images, floating glass HUD biometric stat cards (`154 BPM`, `850 kcal`, `98.6%`), slide controls, and mobile touch-swipe gestures.
 - **⭐ Justdial 5.0★ Verified Badges & Proof**: Rated 5.0/5.0 with 45+ customer ratings on Justdial, including verified customer reviews and direct Justdial listing link.
-- **📸 Inside Facility Tour Gallery**: Dedicated 6-photo facility showcase with interactive 3D tilt cards and live captions.
+- **📸 7 Real HD Gym Photos Showcase (Justdial Complete Catalog)**: Dedicated facility gallery with interactive category filter tabs (*All*, *Heavy Iron & Racks*, *Strength Stations*, *Cardio Suite*, *Luxury Studio*) and fullscreen Lightbox zoom viewer.
+- **✨ Luxury Gym Amenities Suite**: High-Power AC Climate Control, Personal Secure Lockers, Hygiene Showers & Washrooms, 100% Sanitized Equipment, Surround Sound Motivation, Free Roadside Parking, RO Chilled Hydration, and High-Speed Free Wi-Fi.
+- **🏠 Official Justdial Specialized Programs**:
+  - *Personal Training At Home (For Women)*: Certified female & male doorstep coaches with private safe home workouts.
+  - *Personal Training At Home (For Men)*: Doorstep functional conditioning, calisthenics & strength guidance.
+  - *Meditation Classes & Mindful Recovery Counselling*: Guided breathwork, CNS stress relief & lifestyle counseling.
+  - *Luxury Gym Floor & Health Club Suites*: Eleiko/Bullrock style power racks, 60kg dumbbells & cardio arena.
 - **📱 100% Fully Responsive**: Pixel-perfect layout for Mobile phones (320px–480px), Tablets (768px–1024px), Laptops and 4K Desktops.
 - **🍔 Mobile Navigation Drawer**: Glassmorphism slide-down navigation menu with direct one-tap pass claiming and call hotline buttons.
 - **🎯 Interactive Muscle Explorer Lab**: App-like horizontal swipeable tabs targeting Chest, Back, Legs, Shoulders, Arms, and Core with pro workout tips.
@@ -19,7 +25,7 @@ A modern, high-performance single-page web platform designed for **Fitness Zone 
   - Real-time **BMI Body Composition Meter** with animated needle gauge.
   - **Beast Macro & Calorie Engine** calculating target TDEE calories and protein grams based on goals (Bulk / Cut / Recomp).
 - **📅 Weekly Class Timetable**: Dual-shift training timetable (Morning: 05:30 AM – 10:30 AM & Evening: 05:00 PM – 10:00 PM, Sunday Recovery).
-- **💳 Battle Pass Memberships**: Interactive Monthly vs Annual billing toggle with 25% annual discount calculation.
+- **💳 Battle Pass Memberships**: 5-tier official Justdial rate card (`₹100` Day Pass, `₹2,000` 1-Mo, `₹5,000` 3-Mo, `₹8,000` 6-Mo, `₹12,000` 1-Yr with 50% OFF).
 - **📲 Direct WhatsApp Integration**: Dynamic trial pass booking modal that auto-generates pre-formatted WhatsApp messages to `+91 83289 10274`.
 - **📍 Verified Location & Pinpoint GPS Map**: Full details for Sarojini Nagar, Kechala, Poda Line, Koraput, Odisha 764020 (`GPS: 18.8133454° N, 82.7016836° E`) with one-tap "Get Directions".
 
